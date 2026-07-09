@@ -1,11 +1,13 @@
-"use client";
-
-import { useRouter, usePathname } from "next/navigation";
+import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { X, ArrowRight } from "lucide-react";
-import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
+
+export const metadata: Metadata = {
+  title: "Our Work Portfolio | Before & After | Diaz Landscape",
+  description: "See the difference. View our local landscaping projects, before-and-after transformations, and cleanups in Charleston and Ladson, SC.",
+};
 
 const localProjects = [
   {
@@ -45,44 +47,18 @@ const localProjects = [
   },
 ];
 
-export default function GalleryClientWrapper() {
-  const router = useRouter();
-  const pathname = usePathname();
-
-  const handleClose = () => {
-    // Force cleanup scroll-locks before transitioning
-    document.body.style.overflow = "";
-    document.documentElement.style.overflow = "";
-    router.push("/");
-  };
-
+export default function GalleryPage() {
   return (
-    <motion.div
-      key={pathname}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.4 }}
-      className="relative min-h-[100dvh] bg-brand-offwhite text-brand-forest pb-32"
-    >
-      {/* Persistent Close Button using navigation router */}
-      <button 
-        onClick={handleClose}
-        className="fixed top-6 right-6 z-[9999] flex items-center gap-2 px-6 py-3 rounded-full bg-white/80 backdrop-blur-md text-brand-forest hover:bg-white transition-colors shadow-lg border border-brand-forest-light/10"
-        aria-label="Close Gallery"
-      >
-        <span className="font-semibold tracking-wide uppercase text-sm">Close</span>
-        <X size={18} />
-      </button>
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-24">
+    <div className="relative min-h-[100dvh] bg-brand-offwhite text-brand-forest pt-28 md:pt-32 pb-32">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
         {/* Header Section */}
         <div className="text-center max-w-3xl mx-auto mb-16 md:mb-24">
           <p className="text-brand-grass-dark font-bold tracking-widest uppercase mb-4">Our Work</p>
           <h1 className="text-5xl md:text-7xl font-serif font-medium tracking-tight mb-6">
             The Difference is <br className="hidden md:block"/> in the Details
           </h1>
-          <p className="text-lg md:text-xl text-brand-forest-light max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-brand-forest-light max-w-2xl mx-auto font-sans">
             We don't just cut grass. We engineer outdoor spaces. Drag the slider below to see a real transformation in our community.
           </p>
         </div>
@@ -154,6 +130,6 @@ export default function GalleryClientWrapper() {
           </Link>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }
