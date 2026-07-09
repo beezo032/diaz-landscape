@@ -16,7 +16,7 @@ const services = [
     id: "pine-straw",
     title: "Pine Straw Installation",
     description: "We provide professional pine straw installation, a hallmark of clean South Carolina landscaping. Fresh pine straw beds give your yard a tidy, natural southern look while protecting soil and roots from intense summer heat.",
-    image: "/images/gallery_3.png",
+    image: "/images/gallery_3_1783559469024.png",
     href: "/services/pine-straw",
   },
   {

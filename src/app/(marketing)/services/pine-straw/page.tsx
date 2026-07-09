@@ -16,7 +16,7 @@ const serviceHighlights = [
 ];
 
 const galleryImages = [
-  "/images/gallery_3.png", // Southern garden pine straw bed
+  "/images/gallery_3_1783559469024.png", // Southern garden pine straw bed
   "/images/gallery_4_1783559476375.png", // Clean lawn bed
   "/images/gallery_5_1783559482872.png", // Bed detailing
 ];
