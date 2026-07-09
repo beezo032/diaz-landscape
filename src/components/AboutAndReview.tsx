@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import { Star, CheckCircle } from "lucide-react";
 
@@ -10,12 +8,12 @@ export default function AboutAndReview() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           
           {/* Left Side: Authentic Review */}
-          <div className="bg-brand-offwhite border border-gray-200/60 rounded-2xl p-8 sm:p-10 shadow-sm flex flex-col justify-between h-full">
+          <div className="bg-brand-offwhite border border-gray-200/60 rounded-2xl p-8 sm:p-10 shadow-sm flex flex-col justify-between lg:h-full">
             <div>
               {/* Stars & Verification Tag */}
               <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
                 <div className="flex items-center gap-0.5">
-                  {[...Array(5)].map((_, i) => (
+                  {[0, 1, 2, 3, 4].map((_, i) => (
                     <Star key={i} size={18} className="fill-brand-grass text-brand-grass" />
                   ))}
                 </div>
