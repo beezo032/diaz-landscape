@@ -23,7 +23,7 @@ const galleryImages = [
 
 export default function MulchingPage() {
   return (
-    <div className="flex-1 flex flex-col bg-brand-offwhite">
+    <div className="w-full min-h-screen flex flex-col bg-brand-offwhite">
       {/* Service Hero */}
       <section className="bg-zinc-950 py-16 md:py-24 text-center text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

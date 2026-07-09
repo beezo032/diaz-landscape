@@ -34,7 +34,7 @@ export default function ServicePageTemplate() {
   };
 
   return (
-    <div className="flex-1 flex flex-col bg-brand-offwhite">
+    <div className="w-full min-h-screen flex flex-col bg-brand-offwhite">
       
       {/* Service Hero (h-[40vh]) */}
       <section className="relative h-[40vh] flex items-center justify-center text-center text-white overflow-hidden bg-zinc-950">
