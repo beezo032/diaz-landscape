@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f8faf9; /* clean off-white */
+  --foreground: #101c13; /* deep forest green text */
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-serif: var(--font-playfair);
+  --font-signature: var(--font-great-vibes);
+  
+  /* Custom brand colors */
+  --color-brand-forest: #1e3f20;
+  --color-brand-forest-light: #2c592e;
+  --color-brand-grass: #4ade80;
+  --color-brand-grass-dark: #22c55e;
+  --color-brand-offwhite: #f8faf9;
+  
+  /* Typography Scale */
+  --text-fluid-sm: clamp(0.875rem, 0.8rem + 0.375vw, 1.25rem);
+  --text-fluid-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+  --text-fluid-lg: clamp(1.125rem, 1.05rem + 0.375vw, 1.3125rem);
+  --text-fluid-xl: clamp(1.25rem, 1.1rem + 0.75vw, 1.625rem);
+  --text-fluid-2xl: clamp(1.5rem, 1.25rem + 1.25vw, 2.125rem);
+  --text-fluid-3xl: clamp(1.875rem, 1.45rem + 2.125vw, 2.9375rem);
+  --text-fluid-4xl: clamp(2.25rem, 1.65rem + 3vw, 3.75rem);
+  --text-fluid-5xl: clamp(3rem, 2.1rem + 4.5vw, 5.25rem);
+  
+  /* Custom Animations */
+  --animate-spin-slow: spin 8s linear infinite;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0d1a10;
+    --foreground: #f8faf9;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Utilities */
+@keyframes pan-bg {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 100% 100%; }
+}
+
+.animate-pan-bg {
+  animation: pan-bg 40s linear infinite alternate;
+}
+
+/* Text stroke utility for Services watermark */
+.text-stroke-white {
+  -webkit-text-stroke: 1px rgba(255,255,255,0.2);
+}
