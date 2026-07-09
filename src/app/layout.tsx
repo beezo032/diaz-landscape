@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Playfair_Display, Great_Vibes } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
-import PageTransition from "@/components/PageTransition";
 import MobileActionBar from "@/components/MobileActionBar";
 
 const geistSans = Geist({
@@ -97,7 +96,7 @@ export default function RootLayout({
           }}
         />
         <SmoothScroll>
-          <PageTransition>{children}</PageTransition>
+          {children}
           <MobileActionBar />
         </SmoothScroll>
       </body>
